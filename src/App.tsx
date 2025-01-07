@@ -1,12 +1,13 @@
-import './App.css';
+import LoginScreen from './modules/login';
 
 function App() {
 
   return (
-    <>
-      <div>Olá</div>
-    </>
+      <div>
+        <LoginScreen />
+      </div>
   );
 }
+
 
 export default App;
