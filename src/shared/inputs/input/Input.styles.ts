@@ -1,16 +1,18 @@
 import styled from 'styled-components';
 
 export const BoxInput = styled.div`
-    width: 300px;
+    width: 350px;
+    padding-left: 50px;
+    margin-bottom: 10px;
 `;
 
 export const TitleInput = styled.h3`
-    font-family: sans-serif;
+    font-family: Verdana;
     font-size: 14;
-    font-weight: 500px;
-    font-style: normal;
-    line-height: 21px;
-    margin-left: 8px;
+    margin-left: 0px;
     text-align: left;
+    margin-bottom: 10px;
+    color: white;
     
 `;
+

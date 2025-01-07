@@ -9,7 +9,7 @@ const Input = ({titulo, ...props}: InputProps) => {
     return (
         <BoxInput>
             <TitleInput>{titulo}</TitleInput>
-            <InputCol {...props}/>
+            <InputCol {...props }/>
         </BoxInput>
     
 )

@@ -2,7 +2,15 @@ import styled from "styled-components";
 
 export const Container = styled.div`
     width: 100%;
+    height: 100%;
     display: flex;
+`;
+
+export const Titulo = styled.h2`
+    font-size: 30px;
+    font-family: Verdana;
+    color: white;
+    
 `;
 
 export const BackgroundImage = styled.img`
@@ -19,12 +27,12 @@ export const BackgroundImage = styled.img`
 export const LogoImage = styled.img`
     width: 150px;
     height: 150px;
-    padding-top: 50px;
-    
+    padding-top: 30px;
+    margin-bottom: 20px;
 `;
 
 export const ContainerLogin = styled.div `
-    background-color: #f0f0f0;
+    background-color: rgba(78, 1, 78, 0.1);
     width: 100%;
     height: 100vh;
     max-width: 568px;
@@ -46,7 +54,7 @@ export const LimitDiv = styled.div`
     text-align: center;
     padding: 20px;
     display: block;
-    background-color: #61dff04f;
-    box-shadow: 3px 3px 2px 2px rgba(0, 0, 0, 0.1);
+    background-color: #75adb44f;
+    box-shadow: 3px 3px 2px 2px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
 `
