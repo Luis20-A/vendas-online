@@ -43,8 +43,9 @@ export const LimitDiv = styled.div`
     height: 500px;
     max-width: 450px;
     justify-content: center;
+    text-align: center;
     padding: 20px;
-    display: flex;
+    display: block;
     background-color: #61dff04f;
     box-shadow: 3px 3px 2px 2px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
