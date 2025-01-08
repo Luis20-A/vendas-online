@@ -8,7 +8,7 @@ export const BoxInput = styled.div`
 
 export const TitleInput = styled.h3`
     font-family: Verdana;
-    font-size: 14;
+    font-size: 14px;
     margin-left: 0px;
     text-align: left;
     margin-bottom: 10px;

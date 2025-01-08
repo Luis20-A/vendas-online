@@ -25,9 +25,9 @@ export const BackgroundImage = styled.img`
 `;
 
 export const LogoImage = styled.img`
-    width: 150px;
-    height: 150px;
-    padding-top: 30px;
+    width: 130px;
+    height: 130px;
+    margin-top: 5px;
     margin-bottom: 20px;
 `;
 
@@ -57,4 +57,33 @@ export const LimitDiv = styled.div`
     background-color: #75adb44f;
     box-shadow: 3px 3px 2px 2px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
+`
+
+export const CircleLim = styled.div`
+    margin: 10px 50px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    width: 350px;
+    height: 20px;
+    gap: 10px;
+`
+
+export const Circle1 = styled.div`
+    background-color: #e49c01;
+    border-radius: 100px;
+    width: 20px;
+    height: 20px;
+`
+export const Circle2 = styled.div`
+    background-color: #67e401;
+    border-radius: 100px;
+    width: 20px;
+    height: 20px;
+`
+export const Circle3 = styled.div`
+    background-color: #01e4e4;
+    border-radius: 100px;
+    width: 20px;
+    height: 20px;
 `
