@@ -1,10 +1,10 @@
 
 import Button from "../../../shared/buttons/button/Button";
 import Input from "../../../shared/inputs/input/Input";
-import { BackgroundImage,
+import {
     ContainerLogin,
-    LimitDiv, LogoImage,
-    Container,
+    LimitDiv,
+    LogoImage,
     Titulo,
     CircleLim,
     Circle1,
@@ -14,8 +14,6 @@ import { BackgroundImage,
 
 const LoginScreen = () => {
     return (
-        <Container>
-            <BackgroundImage src="./comercio.jpg"/>
             <ContainerLogin>
                 <LimitDiv>
                     <LogoImage src="./icone.png"/>
@@ -30,7 +28,6 @@ const LoginScreen = () => {
                     </CircleLim>
                 </LimitDiv>
             </ContainerLogin>
-        </Container>
     )
 }
 

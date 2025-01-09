@@ -1,5 +1,5 @@
 body{
-    background-color: rgba(78, 1, 78, 0.9);
+    background-color: #014126;
 }
 
 *{
@@ -9,7 +9,7 @@ body{
 
 .co {
     color:rgba(78, 1, 78, 0.637);
-    color: #01e4e4;
+    color: #096840e1;
 }
 
 @tailwind base;

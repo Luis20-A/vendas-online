@@ -1,48 +1,51 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
-    width: 100%;
-    height: 100%;
-    display: flex;
-`;
-
 export const Titulo = styled.h2`
     font-size: 30px;
     font-family: Verdana;
-    color: white;
+    color: #01e4e4;
+    margin-bottom: 5px;
     
 `;
 
 export const BackgroundImage = styled.img`
+
     position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
     height: 100vh;
-    max-width: 800px;
     object-fit: cover;
     z-index: 1;
+
 `;
+
 
 export const LogoImage = styled.img`
     width: 130px;
     height: 130px;
     margin-top: 5px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 `;
 
 export const ContainerLogin = styled.div `
-    background-color: rgba(78, 1, 78, 0.1);
+    background-color: rgba(78, 1, 78, 0);
     width: 100%;
     height: 100vh;
-    max-width: 568px;
-    position: absolute;
-    right: 0;
-    top: 0;
     z-index: 2;
     align-items: center;
     justify-content: center;
     display: flex;
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-image: url("/fundo/comercio.jpg");
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        opacity: 0.5;
+        z-index: 1;
+    }
 
 `;
 
@@ -52,11 +55,17 @@ export const LimitDiv = styled.div`
     max-width: 450px;
     justify-content: center;
     text-align: center;
+    left: 0;
+    top: 0;
     padding: 20px;
-    display: block;
-    background-color: #75adb44f;
-    box-shadow: 3px 3px 2px 2px rgba(0, 0, 0, 0.2);
+    background-color: #096840;
+    background-image: url("/compra2.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: bottom ;
+    box-shadow: 3px 3px 2px 2px rgba(0, 0, 0, 0.4);
     border-radius: 10px;
+    z-index: 3;
 `
 
 export const CircleLim = styled.div`
