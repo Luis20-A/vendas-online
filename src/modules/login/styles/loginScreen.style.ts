@@ -1,4 +1,5 @@
-import styled from "styled-components";
+
+import styled, { keyframes } from "styled-components";
 
 export const Titulo = styled.h2`
     font-size: 30px;
@@ -77,22 +78,56 @@ export const CircleLim = styled.div`
     height: 20px;
     gap: 10px;
 `
+const pulse = keyframes`
+
+    0% {
+        transition: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+
+`
+
 
 export const Circle1 = styled.div`
     background-color: #e49c01;
     border-radius: 100px;
     width: 20px;
     height: 20px;
+    animation: ${pulse} 1.5s infinite;
+
+    &:hover {
+        background-color: blue;
+        transition: transform 0.3s, background-color 0.3s;
+    }
 `
 export const Circle2 = styled.div`
     background-color: #67e401;
     border-radius: 100px;
     width: 20px;
     height: 20px;
+    animation: ${pulse} 1.8s infinite;
+
+    &:hover {
+        background-color: yellow;
+        transition: transform 0.3s, background-color 0.3s;
+    }
 `
 export const Circle3 = styled.div`
     background-color: #01e4e4;
     border-radius: 100px;
     width: 20px;
     height: 20px;
+    animation: ${pulse} 2s infinite;
+
+    &:hover {
+        background-color: red;
+        transition: transform 0.3s, background-color 0.3s;
+    }
 `
