@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import Button from "../../../shared/buttons/button/Button";
 import Input from "../../../shared/inputs/input/Input";
@@ -12,22 +11,38 @@ import {
     Circle2,
     Circle3
 } from "../styles/loginScreen.style";
+import axios from "axios";
 
 const LoginScreen = () => {
 
-    const [usuario, setUsuario] = useState('');
+    const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
-    const handleUsuarioChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setUsuario(event.target.value)
+    const handleEmailChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setEmail(event.target.value)
     };
 
     const handlePasswordChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setPassword(event.target.value)
     };
 
-    const handleLoginClick = () => {
-        alert(`Usuario: ${usuario}, Password: ${password}`)
+    const handleLoginClick = async ()  => {
+        await axios ({
+            method: 'post',
+            url: 'http://localhost:8080/auth',
+            data: {
+                email: email,
+                password: password,
+            }
+        })
+        .then((result) => {
+            alert(`Fez login ${result.data.accessToken}`)
+            return result.data
+        })
+        .catch(() => {
+            alert("Dados invalidos")
+        })
+        
     }
 
     return (
@@ -38,8 +53,8 @@ const LoginScreen = () => {
                     <Input
                         title="Digite o nome de usuário"
                         titulo="Usuário"
-                        onChange={handleUsuarioChange}
-                        value={usuario}
+                        onChange={handleEmailChange}
+                        value={email}
                         />
                     <Input
                         title="Digite a senha"
