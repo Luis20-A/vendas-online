@@ -18,14 +18,6 @@ export const BackgroundImage = styled.img`
 
 `;
 
-
-export const LogoImage = styled.img`
-    width: 130px;
-    height: 130px;
-    margin-top: 5px;
-    margin-bottom: 10px;
-`;
-
 export const ContainerLogin = styled.div `
     background-color: rgba(78, 1, 78, 0);
     width: 100%;

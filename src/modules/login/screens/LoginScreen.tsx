@@ -4,7 +4,6 @@ import Input from "../../../shared/inputs/input/Input";
 import {
     ContainerLogin,
     LimitDiv,
-    LogoImage,
     Titulo,
     CircleLim,
     Circle1,
@@ -12,6 +11,7 @@ import {
     Circle3
 } from "../styles/loginScreen.style";
 import axios from "axios";
+import SVGlogo from "../../../shared/icones/SVGlogo";
 
 const LoginScreen = () => {
 
@@ -48,7 +48,7 @@ const LoginScreen = () => {
     return (
             <ContainerLogin>
                 <LimitDiv>
-                    <LogoImage src="./icone.png"/>
+                    <SVGlogo width={130} height={130}/>
                     <Titulo>Login</Titulo>
                     <Input
                         title="Digite o nome de usuário"
