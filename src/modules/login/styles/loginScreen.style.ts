@@ -18,6 +18,30 @@ export const BackgroundImage = styled.img`
 
 `;
 
+export const Container = styled.div`
+    display: flex;
+    z-index: 4;
+    width: 900px;
+    height: 520px;
+    box-shadow: 3px 3px 2px 2px rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+
+`;
+export const ContainerBox = styled.div`
+    background-color: #cefae8e1;
+    width: 100%;
+    height: 500px;
+    max-width: 450px;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+`;
+
 export const ContainerLogin = styled.div `
     background-color: rgba(78, 1, 78, 0);
     width: 100%;
@@ -45,24 +69,23 @@ export const ContainerLogin = styled.div `
 export const LimitDiv = styled.div`
     width: 100%;
     height: 500px;
+    position: right;
     max-width: 450px;
     justify-content: center;
     text-align: center;
-    left: 0;
-    top: 0;
-    padding: 20px;
     background-color: #096840;
     background-image: url("/compra2.png");
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: bottom ;
-    box-shadow: 3px 3px 2px 2px rgba(0, 0, 0, 0.4);
-    border-radius: 10px;
+    padding: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
     z-index: 3;
 `
 
 export const CircleLim = styled.div`
-    margin: 10px 50px;
+    margin: 15px 50px;
     justify-content: center;
     display: flex;
     align-items: center;
@@ -85,7 +108,6 @@ const pulse = keyframes`
 
 
 `
-
 
 export const Circle1 = styled.div`
     background-color: #e49c01;

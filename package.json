@@ -10,12 +10,16 @@
     "lint": "npm run lint:format && npm run lint:fix "
   },
   "dependencies": {
+    "@remix-run/router": "^1.21.0",
     "@types/styled-components": "^5.1.34",
     "antd": "^5.23.0",
     "axios": "^1.7.9",
+    "localforage": "^1.10.0",
+    "match-sorter": "^8.0.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^7.1.1",
+    "sort-by": "^0.0.2",
     "styled-components": "^6.1.14"
   },
   "devDependencies": {
