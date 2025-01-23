@@ -1,8 +1,9 @@
-import axios from 'axios';
 import { useState } from 'react';
-import Button from '../../../shared/buttons/button/Button';
-import SVGlogo from '../../../shared/icones/SVGlogo';
-import Input from '../../../shared/inputs/input/Input';
+import Button from '../../../shared/components/buttons/button/Button';
+import SVGlogo from '../../../shared/components/icones/SVGlogo';
+import Input from '../../../shared/components/inputs/input/Input';
+import { useRequests } from '../../../shared/hooks/useRequests';
+import { userGlobalContext } from '../../../shared/hooks/UserGlobalContext';
 import {
     Circle1,
     Circle2,
@@ -16,8 +17,10 @@ import {
 } from '../styles/loginScreen.style';
 
 const LoginScreen = () => {
+    const {accessToken, setAccessToken} = userGlobalContext();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const { postRequest, loading } = useRequests();
 
     const handleEmailChange = (
         event: React.ChangeEvent<HTMLInputElement>,
@@ -31,22 +34,12 @@ const LoginScreen = () => {
         setPassword(event.target.value);
     };
 
-    const handleLoginClick = async () => {
-        await axios({
-            method: 'post',
-            url: 'http://localhost:8080/auth',
-            data: {
-                email: email,
-                password: password,
-            },
-        })
-            .then((result) => {
-                alert(`Fez login ${result.data.accessToken}`);
-                return result.data;
-            })
-            .catch(() => {
-                alert('Dados invalidos');
-            });
+    const handleLoginClick = () => {
+        setAccessToken('Novo Token');
+        postRequest('http://localhost:8080/auth', {
+            email: email,
+            password: password,
+        });
     };
 
     return (
@@ -56,8 +49,8 @@ const LoginScreen = () => {
                     <p>Olá</p>
                 </ContainerBox>
                 <LimitDiv>
-                    <SVGlogo width={130} height={130}/>
-                    <Titulo>Login</Titulo>
+                    <SVGlogo width={130} height={130} />
+                    <Titulo>Login {accessToken}</Titulo>
                     <Input
                         title="Digite o nome de usuário"
                         titulo="Usuário"
@@ -71,7 +64,11 @@ const LoginScreen = () => {
                         value={password}
                         type="password"
                     />
-                    <Button type="primary" onClick={handleLoginClick}>
+                    <Button
+                        loading={loading}
+                        type="primary"
+                        onClick={handleLoginClick}
+                    >
                         ENTRAR
                     </Button>
                     <CircleLim>

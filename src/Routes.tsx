@@ -6,7 +6,7 @@ const RotaPrincipal: RouteObject[] = [
     {
         path:'/',
         element: <div>Pagina inicial</div>,
-        errorElement: <div>Algo correu muito mal</div>,
+        errorElement: <div>Pagina não encontrada</div>,
     }
 ]
 

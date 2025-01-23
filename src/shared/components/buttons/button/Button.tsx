@@ -1,5 +1,6 @@
 import { ButtonProps } from "antd"
-import { ButtonAntd } from "./Button.style"
+import { ButtonAntd } from "./button.style"
+
 
 const Button = ({...props}: ButtonProps) => {
     return (
