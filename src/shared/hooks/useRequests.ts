@@ -1,8 +1,10 @@
 import axios from 'axios';
 import { useState } from 'react';
+import { userGlobalContext } from './UserGlobalContext';
 
 export const useRequests = () => {
     const [loading, setLoading] = useState(false);
+    const { setNotification } = userGlobalContext();
 
     const getRequest = async (url: string) => {
         setLoading(true);
@@ -28,11 +30,11 @@ export const useRequests = () => {
         })
             .then((result) => {
                 // alert(`Fez login ${result.data.accessToken}`);
-                alert("Fez login")
+                setNotification('Fez login', 'success');
                 return result.data;
             })
             .catch(() => {
-                alert('Erro no post');
+                setNotification('Senha invalida', 'error');
             });
 
         setLoading(false);

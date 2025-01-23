@@ -36,7 +36,7 @@ const LoginScreen = () => {
 
     const handleLoginClick = () => {
         setAccessToken('Novo Token');
-        postRequest('http://localhost:8080/auth', {
+        postRequest('http://localhost:8085/auth', {
             email: email,
             password: password,
         });
